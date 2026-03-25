@@ -650,7 +650,6 @@ mcmc_dots_by_chain <- function(
     bayesplot_theme_get() +
     yaxis_text(FALSE) +
     yaxis_ticks(FALSE) +
-    theme(axis.line.y = element_blank()) +
     yaxis_title(on = n_param == 1 && violin) +
     xaxis_title(on = n_param == 1)
 }
