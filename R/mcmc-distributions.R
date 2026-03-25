@@ -641,11 +641,7 @@ mcmc_dots_by_chain <- function(
     graph <- graph + do.call("facet_wrap", facet_args)
   }
 
-  if (!violin) {
-    graph <- graph + theme(axis.line.y = element_blank())
-  }
-
-  graph +
+  graph <- graph +
     dont_expand_y_axis(expansion(mult = 0.005, add = 0)) +
     bayesplot_theme_get() +
     yaxis_text(FALSE) +
